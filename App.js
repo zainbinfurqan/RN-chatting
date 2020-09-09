@@ -26,7 +26,7 @@ const App: () => React$Node = () => {
   return (
     <>
 
-      {/* <RouterComponent /> */}
+      <RouterComponent />
       {/* <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"

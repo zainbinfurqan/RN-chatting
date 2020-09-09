@@ -95,43 +95,53 @@ class Video extends Component {
                 {
                     this.state.peerIds.length > 3                                     //view for four videostreams
                         ? <View style={{ flex: 1 }}>
-                            <View style={{ flex: 1 / 2, flexDirection: 'row' }}><AgoraView style={{ flex: 1 / 2 }}
-                                remoteUid={this.state.peerIds[0]}
-                                mode={1} />
+                            <View style={{ flex: 1 / 2, flexDirection: 'row' }}>
+                                <AgoraView style={{ flex: 1 / 2 }}
+                                    remoteUid={this.state.peerIds[0]}
+                                    mode={1} />
                                 <AgoraView style={{ flex: 1 / 2 }}
                                     remoteUid={this.state.peerIds[1]}
-                                    mode={1} /></View>
-                            <View style={{ flex: 1 / 2, flexDirection: 'row' }}><AgoraView style={{ flex: 1 / 2 }}
-                                remoteUid={this.state.peerIds[2]}
-                                mode={1} />
+                                    mode={1} />
+                            </View>
+                            <View style={{ flex: 1 / 2, flexDirection: 'row' }}>
+                                <AgoraView style={{ flex: 1 / 2 }}
+                                    remoteUid={this.state.peerIds[2]}
+                                    mode={1} />
                                 <AgoraView style={{ flex: 1 / 2 }}
                                     remoteUid={this.state.peerIds[3]}
-                                    mode={1} /></View>
+                                    mode={1} />
+                            </View>
                         </View>
                         : this.state.peerIds.length > 2                                 //view for three videostreams
                             ? <View style={{ flex: 1 }}>
-                                <View style={{ flex: 1 / 2 }}><AgoraView style={{ flex: 1 }}
-                                    remoteUid={this.state.peerIds[0]}
-                                    mode={1} /></View>
-                                <View style={{ flex: 1 / 2, flexDirection: 'row' }}><AgoraView style={{ flex: 1 / 2 }}
-                                    remoteUid={this.state.peerIds[1]}
-                                    mode={1} />
+                                <View style={{ flex: 1 / 2 }}>
+                                    <AgoraView style={{ flex: 1 }}
+                                        remoteUid={this.state.peerIds[0]}
+                                        mode={1} />
+                                </View>
+                                <View style={{ flex: 1 / 2, flexDirection: 'row' }}>
+                                    <AgoraView style={{ flex: 1 / 2 }}
+                                        remoteUid={this.state.peerIds[1]}
+                                        mode={1} />
                                     <AgoraView style={{ flex: 1 / 2 }}
                                         remoteUid={this.state.peerIds[2]}
-                                        mode={1} /></View>
+                                        mode={1} />
+                                </View>
                             </View>
                             : this.state.peerIds.length > 1                              //view for two videostreams
-                                ? <View style={{ flex: 1 }}><AgoraView style={{ flex: 1 }}
-                                    remoteUid={this.state.peerIds[0]}
-                                    mode={1} /><AgoraView style={{ flex: 1 }}
+                                ? <View style={{ flex: 1 }}>
+                                    <AgoraView style={{ flex: 1 }}
+                                        remoteUid={this.state.peerIds[0]}
+                                        mode={1} />
+                                    <AgoraView style={{ flex: 1 }}
                                         remoteUid={this.state.peerIds[1]}
-                                        mode={1} /></View>
+                                        mode={1} />
+                                </View>
                                 : this.state.peerIds.length > 0                             //view for videostream
                                     ? <AgoraView style={{ flex: 1 }}
                                         remoteUid={this.state.peerIds[0]}
                                         mode={1} />
-                                    : <View />
-                }
+                                    : <View />}
                 {
                     !this.state.vidMute                                              //view for local video
                         ? <AgoraView style={styles.localVideoStyle} zOrderMediaOverlay={true} showLocalVideo={true} mode={1} />

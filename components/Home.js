@@ -8,7 +8,7 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            AppID: 'fc5136ca373f47599de2ef68059b1663',                    //Set your APPID here
+            AppID: 'app id',                    //Set your APPID here
             ChannelName: '',                                  //Set a default channel or leave blank
         };
         if (Platform.OS === 'android') {                    //Request required permissions from Android
